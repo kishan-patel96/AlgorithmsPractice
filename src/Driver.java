@@ -49,18 +49,9 @@ public class Driver
             System.out.print(i + " ");
         }*/
 
-        int[] ar1 = new int[]{1, 5, 9, 10, 15, 20};
-        int[] ar2 = new int[]{1, 2, 3, 4};
-
-        MergeTwoSortedArrays.merge(ar1, ar2);
-        for(int i : ar1)
+        for(int i = 0; i < 10; i++)
         {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for(int i : ar2)
-        {
-            System.out.print(i + " ");
+            System.out.println(EnigmaMachine.permuations(i));
         }
     }
 
