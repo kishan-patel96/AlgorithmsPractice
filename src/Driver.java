@@ -49,10 +49,30 @@ public class Driver
             System.out.print(i + " ");
         }*/
 
-        for(int i = 0; i < 10; i++)
-        {
-            System.out.println(EnigmaMachine.permuations(i));
-        }
+        List<Integer> l1 = new ArrayList<>();
+        l1.add(2000);
+        l1.add(2000);
+        l1.add(1975);
+        l1.add(1975);
+        l1.add(1803);
+        l1.add(1750);
+        l1.add(1840);
+        l1.add(1803);
+        l1.add(1894);
+
+        List<Integer> l2 = new ArrayList<>();
+        l2.add(2010);
+        l2.add(2010);
+        l2.add(2005);
+        l2.add(2003);
+        l2.add(1809);
+        l2.add(1869);
+        l2.add(1935);
+        l2.add(1921);
+        l2.add(1921);
+
+        System.out.println(BirthDeathYear.numberAlive(l1, l2));
+        System.out.println(BirthDeathYear.numberAliveLinear(l1, l2));
     }
 
     /*
