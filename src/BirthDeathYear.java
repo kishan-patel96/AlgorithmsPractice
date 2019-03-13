@@ -21,6 +21,33 @@ public class BirthDeathYear
         return alive_max;
     }
 
+    //O(nlogn)
+    public static int numberAliveSorted(List<Integer> birth, List<Integer> death)
+    {
+        Collections.sort(birth);
+        Collections.sort(death);
+
+        int maxAlive = 0;
+        int maxCurr = 0;
+
+        for(int i = 0, j = 0; i < birth.size(); i++)
+        {
+            if(birth.get(i) <= death.get(j))
+            {
+                maxCurr++;
+            }
+            maxAlive = Math.max(maxAlive, maxCurr);
+            if(death.get(j) <= birth.get(i))
+            {
+                i--;
+                j++;
+                maxCurr--;
+            }
+        }
+
+        return maxAlive;
+    }
+
     //O(y + n), where y is max_birth_year - min_birth_year, where n is birth.size()
     public static int numberAliveLinear(List<Integer> birth, List<Integer> death)
     {
@@ -68,6 +95,7 @@ public class BirthDeathYear
                 aliveCurr -= deathYears.get(minBirthYear);
             }
         }
+
         return aliveMax;
     }
 }
