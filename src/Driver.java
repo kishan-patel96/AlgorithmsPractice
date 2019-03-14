@@ -7,7 +7,7 @@ public class Driver
 
     public static void main(String[] args)
     {
-        PermutationsRepetition.printPermutations(new char[]{'a', 'b'}, 3);
+        System.out.println(ProductLessThanK.numSubarrays(new int[]{1,9,2,8,6,4,3}, 100));
     }
 
     /*
