@@ -7,7 +7,7 @@ public class Driver
 
     public static void main(String[] args)
     {
-        System.out.println(ProductLessThanK.numSubarrays(new int[]{1,9,2,8,6,4,3}, 100));
+        System.out.println(CompareToFiles.compareTo("1.2.0.0.0.0.0", "1.2.3.4"));
     }
 
     /*
